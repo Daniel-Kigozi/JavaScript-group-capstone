@@ -3,6 +3,6 @@ const itemsCounter = (items) => {
     return 0;
   }
   return items.length;
-}
+};
 
 export default itemsCounter;

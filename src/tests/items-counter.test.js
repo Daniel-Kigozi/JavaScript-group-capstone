@@ -1,4 +1,4 @@
-import itemsCounter from "../modules/items-counter";
+import itemsCounter from '../modules/items-counter.js';
 
 describe('itemsCounter function correctly counts the number of items in an array', () => {
   it('should return the number of items in an array', () => {
