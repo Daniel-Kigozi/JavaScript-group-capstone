@@ -2,6 +2,7 @@
 
 body {
   background-color: #141414;
+
   /* font-family: 'Balsamiq Sans', cursive; */
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
@@ -13,7 +14,7 @@ header {
   font-size: 1.2rem;
   padding: 0 4%;
   position: relative;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
   height: 68px;
 }
 
