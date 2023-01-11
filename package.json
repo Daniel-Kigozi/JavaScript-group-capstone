@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -15,12 +15,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Daniel-Kigozi/JavaScript-group-capstone/issues"
   },
   "homepage": "https://github.com/Daniel-Kigozi/JavaScript-group-capstone#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
