@@ -1,3 +1,51 @@
-.hello {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Ubuntu&display=swap');
+
+body {
+  background-color: #141414;
+
+  /* font-family: 'Balsamiq Sans', cursive; */
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0 4%;
+  position: relative;
+  transition: background-color 0.4s;
+  height: 68px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary-navigation {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 25px;
+  color: #e50914;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.navigation-tab a {
+  color: #fff;
 }
