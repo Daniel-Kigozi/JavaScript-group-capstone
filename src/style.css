@@ -1,3 +1,98 @@
-.hello {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Ubuntu&display=swap');
+@import url('https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css');
+
+body {
+  background-color: #141414;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  height: 68px;
+  padding: 0 4%;
+  position: relative;
+  transition: background-color 0.4s;
+}
+
+header nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.primary-navigation {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  color: #e50914;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.navigation-tab a {
+  color: #fff;
+}
+
+.shows-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  gap: 20px;
+}
+
+.shows-list div {
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
+  transition: all 0.4s;
+  margin: 10px;
+}
+
+.show-container img {
+  width: 20rem;
+}
+
+.title-like {
+  color: #fff;
+  margin: 5px;
+  text-align: center;
+}
+
+.show-title {
+  margin: 10px;
+  font-weight: 500;
+}
+
+.like-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.comment-btn {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
 }
