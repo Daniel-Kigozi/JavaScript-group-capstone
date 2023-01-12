@@ -83,10 +83,14 @@ header nav {
   font-weight: 500;
 }
 
-.like-wrap {
+.likes-wraper {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.like-btn {
+  cursor: pointer;
 }
 
 .comment-btn {
