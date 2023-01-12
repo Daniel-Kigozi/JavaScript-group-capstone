@@ -1,4 +1,4 @@
-import { displayPopUp } from "./popup";
+import { displayPopUp } from './popup.js';
 
 const createShows = (showsList, container) => {
   showsList.forEach((show) => {
@@ -40,18 +40,15 @@ const createShows = (showsList, container) => {
 
     container.appendChild(showContainer);
   });
-  
-  const popUpdiv = document.querySelector('.popup-display');
-    const commentsButton = document.querySelectorAll('.comment-btn');
-    commentsButton.forEach((button) =>button.addEventListener("click", (e)=>{
-        console.log(button);
-        console.log(e.target.id);
-        const movieId = e.target.id;
-      //call the display popup function
-      displayPopUp(movieId);
-      popUpdiv.classList.add('showpopup');
-      }))
 
+  const popUpdiv = document.querySelector('.popup-display');
+  const commentsButton = document.querySelectorAll('.comment-btn');
+  commentsButton.forEach((button) => button.addEventListener('click', (e) => {
+    const movieId = e.target.id;
+    // call the display popup function
+    displayPopUp(movieId);
+    popUpdiv.classList.add('showpopup');
+  }));
 };
 
 export default createShows;

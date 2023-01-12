@@ -1,60 +1,59 @@
-import { postComment, generateComments } from "./comments";
-import commentCounter from "./commentscounter";
+import { postComment, generateComments } from './comments.js';
+import commentCounter from './commentscounter.js';
 
+// Create a function that fetches a movie
+export const fetchMovieDetails = async (id) => {
+  const BASE_MOVIE_URL = 'https://api.tvmaze.com/shows';
+  const response = await fetch(`${BASE_MOVIE_URL}/${id}`);
+  const data = await response.json();
+  return data;
+};
 
-//Create a function that fetches a movie
-export const fetchMovieDetails = async(id) => {
-    const BASE_MOVIE_URL ='https://api.tvmaze.com/shows';
-    const response = await fetch(`${BASE_MOVIE_URL}/${id}`);
-    const data = await response.json();
-    return data
-}
+// Create a function that adds a comment and display it
+export const addcommentEvent = async () => {
+  const newCommentForm = document.querySelector('#new-comment');
 
-//Create a function that adds a comment and display it
-export const addcommentEvent = async() => {
-    console.log('event added');
-    const newCommentForm = document.querySelector('#new-comment');
-    console.log(newCommentForm);
-    const addcommentButton = document.querySelector('.submit-comment');
+  const addcommentButton = document.querySelector('.submit-comment');
 
-    newCommentForm.addEventListener('submit', async (e)=>{
-        e.preventDefault();
-        // const addcommentButton = document.querySelector('.submit-comment');
-        const user = newCommentForm.elements.name;
-        const comment= newCommentForm.elements.comment;
-        console.log(addcommentButton.id, user.value, comment.value);
-        await postComment(addcommentButton.id, user.value, comment.value);
-        const movieCommentDisplay = document.querySelector('.comment-list');
-        const movieCommentsDiv = await generateComments(addcommentButton.id);
-        movieCommentDisplay.innerHTML ='';
-        movieCommentDisplay.append(movieCommentsDiv);
+  newCommentForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    // const addcommentButton = document.querySelector('.submit-comment');
+    const user = newCommentForm.elements.name;
+    const { comment } = newCommentForm.elements;
 
-        const commentCountSpan = document.querySelector('.count-comments');
-        const commentNumber = commentCounter();
-        commentCountSpan.textContent = `${commentNumber}`;
+    await postComment(addcommentButton.id, user.value, comment.value);
+    const movieCommentDisplay = document.querySelector('.comment-list');
+    const movieCommentsDiv = await generateComments(addcommentButton.id);
+    movieCommentDisplay.innerHTML = '';
+    movieCommentDisplay.append(movieCommentsDiv);
 
-        newCommentForm.reset();
-    })
-}
+    const commentCountSpan = document.querySelector('.count-comments');
+    const commentNumber = commentCounter();
+    commentCountSpan.textContent = `${commentNumber}`;
 
-//Create a function that closes the popup
-const addClosePopUpEvent = ()=> {
-    const popUpdiv = document.querySelector('.popup-display');
-    const closeBtn = document.querySelector('.closeBtn');
-    closeBtn.addEventListener('click', (e)=>{
-        e.preventDefault();
+    newCommentForm.reset();
+  });
+};
+
+// Create a function that closes the popup
+const addClosePopUpEvent = () => {
+  const popUpdiv = document.querySelector('.popup-display');
+  const closeBtn = document.querySelector('.closeBtn');
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     popUpdiv.classList.remove('showpopup');
-    popUpdiv.innerHTML = "";
-    })
-}
+    popUpdiv.innerHTML = '';
+  });
+};
 
-//Create a function that creates a popup
-export const createPopUp =(movieDetails)=> {
-    
-    const {name, id, image, genres, runtime, premiered, language} = movieDetails;
-    const divElement = document.createElement('div');
-    divElement.className = 'popup-container';
-    divElement.innerHTML = `
+// Create a function that creates a popup
+export const createPopUp = (movieDetails) => {
+  const {
+    name, id, image, genres, runtime, premiered, language,
+  } = movieDetails;
+  const divElement = document.createElement('div');
+  divElement.className = 'popup-container';
+  divElement.innerHTML = `
             <nav>
                 <p>Movie details page</p>
             </nav>
@@ -80,39 +79,28 @@ export const createPopUp =(movieDetails)=> {
             </div>
             <footer>footer</footer>
               `;
-    return divElement;
-}
+  return divElement;
+};
 
-//create a function that displays a popup
-export const displayPopUp = async (id)=>{
-    const popUpdiv = document.querySelector('.popup-display');
-    popUpdiv.innerHTML = '';
+// create a function that displays a popup
+export const displayPopUp = async (id) => {
+  const popUpdiv = document.querySelector('.popup-display');
+  popUpdiv.innerHTML = '';
 
-    const movieDetails = await fetchMovieDetails(id);
-    console.log(movieDetails);
-    popUpdiv.append(createPopUp(movieDetails));
+  const movieDetails = await fetchMovieDetails(id);
 
-    const movieCommentDisplay = document.querySelector('.comment-list');
-    const movieCommentsDiv = await generateComments(id);
-    movieCommentDisplay.innerHTML ='';
-    movieCommentDisplay.append(movieCommentsDiv);
+  popUpdiv.append(createPopUp(movieDetails));
 
-    const commentCountSpan = document.querySelector('.count-comments');
-    const commentNumber = commentCounter();
-    commentCountSpan.textContent = `${commentNumber}`;
+  const movieCommentDisplay = document.querySelector('.comment-list');
+  const movieCommentsDiv = await generateComments(id);
+  movieCommentDisplay.innerHTML = '';
+  movieCommentDisplay.append(movieCommentsDiv);
 
-    addcommentEvent();
-    
-    addClosePopUpEvent();
-}
+  const commentCountSpan = document.querySelector('.count-comments');
+  const commentNumber = commentCounter();
+  commentCountSpan.textContent = `${commentNumber}`;
 
-//Create a function that adds event listener to dispaly popup
-// export const addPopupEvent = ()=> {
-//     const commentsButton = document.querySelectorAll('.comment-btn');
-//     commentsButton.forEach((button) =>button.addEventListener("click", (e)=>{
-//         console.log(e.target.id);
-//         const movieId = e.target.id;
-//       //call the display popup function
-//       displayPopUp(movieId);
-//       }))
-// }
+  addcommentEvent();
+
+  addClosePopUpEvent();
+};
