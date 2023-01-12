@@ -1,7 +1,13 @@
-import getLikes from './involvement-api.js';
+import { setLikes, getLikes } from './involvement-api.js';
 import { likesCounter } from './items-counter.js';
 
-/* eslint-disable */
+const handleLikeClick = (event, likes) => {
+  setLikes(event.target.id).then(() => {
+    getLikes().then((totalLikes) => {
+      likesCounter(event.target, totalLikes, likes);
+    });
+  });
+};
 
 const createShows = (showsList, container) => {
   showsList.forEach((show) => {
@@ -43,6 +49,7 @@ const createShows = (showsList, container) => {
     getLikes().then((totalLikes) => {
       likesCounter(likeBtn, totalLikes, likes);
     });
+    likeBtn.addEventListener('click', (event) => handleLikeClick(event, likes));
   });
 };
 
