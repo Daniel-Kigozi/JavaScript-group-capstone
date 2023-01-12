@@ -1,6 +1,8 @@
 import getLikes from './involvement-api.js';
 import { likesCounter } from './items-counter.js';
 
+/* eslint-disable */
+
 const createShows = (showsList, container) => {
   showsList.forEach((show) => {
     const { id, image: { medium }, name } = show;
