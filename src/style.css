@@ -107,6 +107,8 @@ footer {
   height: 70px;
   padding-top: 30px;
   text-align: center;
+}
+
 .popup-display {
   display: flex;
   justify-content: center;
