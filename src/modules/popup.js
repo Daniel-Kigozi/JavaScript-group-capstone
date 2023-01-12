@@ -54,7 +54,7 @@ export const createPopUp = (movieDetails) => {
   const divElement = document.createElement('div');
   divElement.className = 'popup-container';
   divElement.innerHTML = `
-            <nav>
+            <nav class="popup-nav">
                 <p>Movie details page</p>
             </nav>
             <button class="closeBtn">X</button>
@@ -77,7 +77,7 @@ export const createPopUp = (movieDetails) => {
                 <button class="submit-comment" id="${id}" type="submit">Comment</button>
                 </form>
             </div>
-            <footer>footer</footer>
+            <footer class="popup-foot">footer</footer>
               `;
   return divElement;
 };
