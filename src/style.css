@@ -96,3 +96,102 @@ header nav {
   border-radius: 5px;
   font-weight: 600;
 }
+.popup-display {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #ede3e3fc;
+  width: 60%;
+  height: 100vh;
+  margin:auto;
+  top: 10%;
+  left: 20%;
+  position: fixed;
+  visibility: hidden;
+}
+.showpopup {
+ opacity: 1;
+ visibility: visible;
+}
+
+
+.closeBtn {
+  position:relative;
+  left: 45%;
+    color: dark-blue;
+    font-size: 16px;
+    margin: 5px;
+    background-color: white;
+}
+.comment-span {
+  display: flex;
+  flex-direction: row;
+  
+}
+.comment-span > p {
+  margin-right: 10px;
+}
+#new-comment {
+  display: flex;
+  flex-direction: column;
+  
+  width: 50%;
+  margin: auto;
+}
+form > input {
+  
+  margin-bottom: 10px;
+  height: 50px;
+  border: 1px solid black;
+}
+.insights {
+  height: 100px;
+}
+.naming {
+  height: 50px;
+}
+.submit-comment {
+  width: 20%;
+  border: 1px solid black;
+  box-shadow: 3px 3px;
+}
+.classification {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  width: 70%;
+}
+.popup-container {
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+ 
+}
+.popup-container > nav {
+  
+  width: 100%;
+  background-color: gray;
+  text-align: center;
+
+}
+.addcomment {
+  
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+.popup-container > footer {
+  
+  width: 100%;
+  background-color: gray;
+  text-align: center;
+  margin-top: 10px;
+  height: 2rem;
+
+}
+
