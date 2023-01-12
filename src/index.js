@@ -1,6 +1,6 @@
 import './style.css';
 import createShows from './modules/create-shows.js';
-import getShows from './modules/involvement-api.js';
+import getShows from './modules/base-api.js';
 
 const allShowsContainer = document.querySelector('.shows-list');
 const main = async () => {

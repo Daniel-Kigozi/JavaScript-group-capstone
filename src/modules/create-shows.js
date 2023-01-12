@@ -1,9 +1,9 @@
 import getLikes from './involvement-api.js';
 import { likesCounter } from './items-counter.js';
 
-/* eslint-disable */
-const createShows = async (showsList, container) => {
-  for (const { id, image: { medium }, name } of showsList) {
+const createShows = (showsList, container) => {
+  showsList.forEach((show) => {
+    const { id, image: { medium }, name } = show;
     const showContainer = document.createElement('div');
     showContainer.id = `movie_${id}`;
     showContainer.classList.add('show-container');
@@ -38,9 +38,10 @@ const createShows = async (showsList, container) => {
 
     container.appendChild(showContainer);
 
-    const totalLikes = getLikes();
-    likesCounter(likeBtn, totalLikes, likes);
-  }
+    getLikes().then((totalLikes) => {
+      likesCounter(likeBtn, totalLikes, likes);
+    });
+  });
 };
 
 export default createShows;
