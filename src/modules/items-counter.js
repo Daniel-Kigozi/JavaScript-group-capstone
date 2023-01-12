@@ -5,4 +5,11 @@ const itemsCounter = (items) => {
   return items.length;
 };
 
-export default itemsCounter;
+const likesCounter = (target, likesArray, likesContainer) => {
+  const item = likesArray.find((item) => item.item_id === target.id);
+  if (item) {
+    likesContainer.innerHTML = `${item.likes} likes`;
+  }
+};
+
+export { itemsCounter, likesCounter };
