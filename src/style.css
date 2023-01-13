@@ -137,7 +137,7 @@ footer {
   flex-direction: row;
 }
 
-.comment-span>p {
+.comment-span > p {
   margin-right: 10px;
 }
 
@@ -148,7 +148,7 @@ footer {
   margin: auto;
 }
 
-form>input {
+form > input {
   margin-bottom: 10px;
   height: 50px;
   border: 1px solid black;
