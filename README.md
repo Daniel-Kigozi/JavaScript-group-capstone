@@ -50,6 +50,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://daniel-kigozi.github.io/JavaScript-group-capstone)
+- [Video Presentation Link](https://drive.google.com/file/d/1qXiFE4vQcJHEpi2FmILT_W-viDkfEeUN/view?usp=sharing)
 
 <!-- Features -->
 
