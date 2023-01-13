@@ -115,21 +115,6 @@ footer {
   font-weight: 500;
 }
 
-.popup-display {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: #ede3e3fc;
-  width: 60%;
-  height: 100vh;
-  margin: auto;
-  top: 5px;
-  left: 20%;
-  position: fixed;
-  visibility: hidden;
-  overflow: scroll;
-}
-
 .showpopup {
   opacity: 1;
   visibility: visible;
@@ -152,7 +137,7 @@ footer {
   flex-direction: row;
 }
 
-.comment-span > p {
+.comment-span>p {
   margin-right: 10px;
 }
 
@@ -163,7 +148,7 @@ footer {
   margin: auto;
 }
 
-form > input {
+form>input {
   margin-bottom: 10px;
   height: 50px;
   border: 1px solid black;
@@ -192,10 +177,17 @@ form > input {
 }
 
 .popup-container {
-  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  overflow: scroll;
+  height: 100vh;
+  background-color: #ede3e3fc;
+  width: 60%;
+  top: 5px;
+  left: 20%;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -216,5 +208,5 @@ form > input {
   background-color: gray;
   text-align: center;
   margin-top: 10px;
-  height: 2rem;
+  height: 4rem;
 }
