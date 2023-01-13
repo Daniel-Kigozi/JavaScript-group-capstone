@@ -46,19 +46,15 @@
 -Webpack
 -Jest
 
-# [Live Demo](https://daniel-kigozi.github.io/JavaScript-group-capstone/)
-
+# [Live Demo]()
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
- -Home page
-- **[key_feature_2]**
+-Home page
 -comments button with popup
-- **[key_feature_3]**
 -Likes counter
 
 <!-- GETTING STARTED -->
