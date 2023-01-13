@@ -1,5 +1,6 @@
 import { setLikes, getLikes } from './involvement-api.js';
 import { likesCounter } from './items-counter.js';
+import { displayPopUp } from './popup.js';
 
 const handleLikeClick = (event, likes) => {
   setLikes(event.target.id).then(() => {
@@ -41,6 +42,7 @@ const createShows = (showsList, container) => {
 
     const commentBtn = document.createElement('button');
     commentBtn.classList.add('comment-btn');
+    commentBtn.id = `${show.id}`;
     commentBtn.textContent = 'Comment';
     showContainer.appendChild(commentBtn);
 
@@ -51,6 +53,15 @@ const createShows = (showsList, container) => {
     });
     likeBtn.addEventListener('click', (event) => handleLikeClick(event, likes));
   });
+
+  const popUpdiv = document.querySelector('.popup-display');
+  const commentsButton = document.querySelectorAll('.comment-btn');
+  commentsButton.forEach((button) => button.addEventListener('click', (e) => {
+    const movieId = e.target.id;
+    // call the display popup function
+    displayPopUp(movieId);
+    popUpdiv.classList.add('showpopup');
+  }));
 };
 
 export default createShows;
