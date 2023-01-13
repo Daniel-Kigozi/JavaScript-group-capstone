@@ -46,7 +46,6 @@
 -Webpack
 -Jest
 
-# [Live Demo]()
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
