@@ -4,7 +4,7 @@
 body {
   background-color: #141414;
   font-family: 'Ubuntu', sans-serif;
-  margin: 90px 0;
+  margin: 90px 0 0;
 }
 
 a {
@@ -107,14 +107,12 @@ header nav {
 
 footer {
   background-color: rgb(117, 111, 111);
-  height: 70px;
+  margin-top: 5rem;
 }
 
 .lower-level {
-  background-color: aliceblue;
-  height: 70px;
-  padding-top: 30px;
-  text-align: center;
+  padding: 30px 35px;
+  font-weight: 500;
 }
 
 .popup-display {
