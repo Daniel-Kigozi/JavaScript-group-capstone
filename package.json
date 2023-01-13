@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "jest --coverage",
+    "deploy": "gh-pages -d dist",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -19,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Daniel-Kigozi/JavaScript-group-capstone/issues"
   },
-  "homepage": "https://github.com/Daniel-Kigozi/JavaScript-group-capstone#readme",
+  "homepage": "https://daniel-kigozi.github.io/JavaScript-group-capstone",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.19.6",
     "babel-eslint": "^10.1.0",
@@ -41,10 +42,10 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "lodash": "^4.17.21"
   },
   "jest": {
     "testEnvironment": "jsdom"
-}
-
+  }
 }
