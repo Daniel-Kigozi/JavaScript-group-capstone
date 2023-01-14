@@ -3,7 +3,7 @@ import createShows from './modules/create-shows.js';
 import getShows from './modules/base-api.js';
 import { itemsCounter } from './modules/items-counter.js';
 
-const tvShows = document.querySelector('.shows')
+const tvShows = document.querySelector('.shows');
 const allShowsContainer = document.querySelector('.shows-list');
 const main = async () => {
   const shows = await getShows();
