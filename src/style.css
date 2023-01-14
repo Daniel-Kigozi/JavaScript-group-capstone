@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Ubuntu&display=swap');
+@import url('https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css');
+
+body {
+  background-color: #141414;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 90px 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  height: 68px;
+  padding: 0 4%;
+  transition: background-color 0.4s;
+  position: fixed;
+  background: black;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+header nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.primary-navigation {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  color: #e50914;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.navigation-tab a {
+  color: #fff;
+}
+
+.shows {
+  color: #fff;
+}
+
+.shows-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  gap: 20px;
+}
+
+.shows-list div {
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
+  transition: all 0.4s;
+  margin: 10px;
+}
+
+.show-container img {
+  width: 20rem;
+}
+
+.title-like {
+  color: #fff;
+  margin: 5px;
+  text-align: center;
+}
+
+.show-title {
+  margin: 10px;
+  font-weight: 500;
+}
+
+.likes-wraper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.like-btn {
+  cursor: pointer;
+}
+
+.comment-btn {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+footer {
+  background-color: rgb(117, 111, 111);
+  margin-top: 5rem;
+}
+
+.lower-level {
+  padding: 30px 35px;
+  font-weight: 500;
+}
+
+.showpopup {
+  opacity: 1;
+  visibility: visible;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.closeBtn {
+  position: relative;
+  left: 45%;
+  top: 5%;
+  color: rgb(6, 6, 35);
+  font-size: 16px;
+  margin: 5px;
+  background-color: white;
+}
+
+.comment-span {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-span > p {
+  margin-right: 10px;
+}
+
+#new-comment {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+form > input {
+  margin-bottom: 10px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.insights {
+  height: 100px;
+}
+
+.naming {
+  height: 50px;
+}
+
+.submit-comment {
+  width: 20%;
+  border: 1px solid black;
+  box-shadow: 3px 3px;
+}
+
+.classification {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.popup-container {
+  opacity: 1;
+  visibility: visible;
+  overflow: scroll;
+  height: 100vh;
+  background-color: #ede3e3fc;
+  width: 60%;
+  top: 5px;
+  left: 20%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-nav {
+  width: 100%;
+  background-color: gray;
+  text-align: center;
+}
+
+.addcomment {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.popup-foot {
+  width: 100%;
+  background-color: gray;
+  text-align: center;
+  margin-top: 10px;
+  height: 4rem;
+}
